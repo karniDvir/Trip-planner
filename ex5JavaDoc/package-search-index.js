@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"com.travelplanner"},{"l":"com.travelplanner.Configuration"},{"l":"com.travelplanner.controller"},{"l":"com.travelplanner.model"},{"l":"com.travelplanner.repository"},{"l":"com.travelplanner.service"}];updateSearchResults();

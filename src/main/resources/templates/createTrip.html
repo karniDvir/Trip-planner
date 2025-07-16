@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Trip</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="/js/validation.js"></script>
+</head>
+<body>
+    <div th:replace="~{fragments/header :: header}"></div>
+
+    <main class="container text-center bg-light">
+        <h1 class="mb-4">Create Trip Plan</h1>
+        <form onsubmit="return validateDates()" th:action="@{/user/createTrip}" th:object="${tripPlan}" method="post">
+            <div class="m-3">
+                <div class="form-group row">
+                    <label class="col-4 form-label" for="tripName" >Trip Destination: </label>
+                    <div class="col-8">
+                        <input type="text" id="tripName" th:field="*{name}" class="form-control bg-light" placeholder="Enter Destination Name" required/>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-4 col-form-label" for="startDate">Start Date:</label>
+                    <div class="col-8">
+                        <input type="date" id="startDate" th:field="*{startDate}" class="form-control"  required/>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-4 col-form-label" for="endDate">End Date:</label>
+                    <div class="col-8">
+                        <input type="date" id="endDate" th:field="*{endDate}" class="form-control" required/>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary">Create</button>
+            </div>
+        </form>
+    </main>
+
+    <div th:replace="~{fragments/footer :: footer}"></div>
+</body>
+</html>

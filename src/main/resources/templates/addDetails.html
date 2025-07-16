@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Select Trip Date</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+<div th:replace="~{fragments/header :: header}"></div>
+
+<main class="container mt-5">
+    <h1 class="mb-4">Insert details to date</h1>
+    <form th:action="@{/user/addDetails/{tripId}(tripId=${tripPlan.id})}" method="post">
+        <div class="form-group">
+            <label for="selectedDate">Select Date:</label>
+            <input type="date" id="selectedDate" name="selectedDate" class="form-control"
+                   th:min="${tripPlan.getStartDate()}"
+                   th:max="${tripPlan.getEndDate()}"
+                   th:value="${tripPlan.getStartDate()}"
+            />
+        </div>
+        <button type="submit" class="btn btn-primary">Choose Date</button>
+    </form>
+</main>
+
+<div th:replace="~{fragments/footer :: footer}"></div>
+
+</body>
+</html>

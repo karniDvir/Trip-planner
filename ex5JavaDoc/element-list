@@ -1,0 +1,6 @@
+com.travelplanner
+com.travelplanner.Configuration
+com.travelplanner.controller
+com.travelplanner.model
+com.travelplanner.repository
+com.travelplanner.service

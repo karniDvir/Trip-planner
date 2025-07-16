@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Travel Planner</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div th:replace="~{fragments/header :: header}"></div>
+
+<main class="container mt-4 text-center">
+    <h1>Welcome to Travel Planner</h1>
+    <p>Plan your dream vacation with our easy-to-use travel planner. Add destinations, hotels, attractions, and share your plans with others!</p>
+
+    <div class="d-flex justify-content-center mt-4">
+        <a th:href="@{/login}" class="btn btn-primary btn-lg mr-3" th:if="${not #authorization.expression('isAuthenticated()')}">New Trip</a>
+        <a th:href="@{/user/createTrip}" class="btn btn-primary btn-lg mr-3" th:if="${#authorization.expression('isAuthenticated()')}">New Trip</a>
+        <a th:href="@{/trip/list}" class="btn btn-info btn-lg">View Feed</a>
+    </div>
+</main>
+
+<div th:replace="~{fragments/footer :: footer}"></div>
+
+</body>
+</html>
