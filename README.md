@@ -1,6 +1,5 @@
- readme - your personal information is mandatory (email or ID)
 <h1>Your Names: Afek_Sulimani , Dvir_Karni.</h1>
-<p>Email: afeksu@edu.hac.ac.il, karnidv@edu.hac.ac.il</p>
+<p>Email: afeksu@edu.hac.ac.il, dkarni07@gmail.com</p>
 
 <h1>Documentation</h1>
 <p>
